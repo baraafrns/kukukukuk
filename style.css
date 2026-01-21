@@ -28,6 +28,41 @@ body {
     display: flex; justify-content: space-between; align-items: center;
 }
 
+#nav-links {
+    display: flex; list-style: none; gap: 2rem; align-items: center;
+}
+
+#nav-links a {
+    color: #dcddde; text-decoration: none; font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#nav-links a:hover {
+    color: var(--discord-blurple);
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+    display: none; flex-direction: column; cursor: pointer; gap: 6px;
+}
+
+.hamburger span {
+    width: 28px; height: 3px; background: #dcddde;
+    border-radius: 2px; transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 /* HERO - MAIN PROFILE CARD */
 .hero { 
     min-height: 100vh; display: flex; align-items: center; justify-content: center;
@@ -184,6 +219,11 @@ body {
     .hero { padding: 6rem 1rem 3rem; }
     .cta-buttons { flex-direction: column; align-items: center; }
     .btn { width: 100%; max-width: 280px; justify-content: center; }
+    
+    .hamburger { display: flex; }
+    #nav-links { display: none; }
+    #nav-links.active { display: flex; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: rgba(15,15,35,0.98); border-bottom: 1px solid var(--glass-border); padding: 1rem 0; z-index: 999; }
+    #nav-links.active li { padding: 0.75rem 2rem; }
 }
 /* PROJECTS SECTION - ADVANCED STYLE */
 .section {
