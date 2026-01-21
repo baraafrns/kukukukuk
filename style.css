@@ -187,18 +187,18 @@ body {
 }
 /* PROJECTS SECTION - ADVANCED STYLE */
 .section {
-    padding: 6rem 2rem; max-width: 1400px; margin: 0 auto; width: 100%;
+    padding: 6rem 2rem; max-width: 1400px; margin: 0 auto; width: 100%; justify-content: center;
 }
 
 .section h2 {
     text-align: center; font-size: clamp(2.5rem, 5vw, 3.8rem);
     margin-bottom: 4rem; font-weight: 800;
     background: linear-gradient(135deg, var(--discord-blurple), var(--discord-green));
-    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; justify-content: center;
 }
 
 .projects-grid {
-    display: grid; 
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2.5rem;
     width: 100%;
